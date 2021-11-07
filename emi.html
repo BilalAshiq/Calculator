@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator - EMI</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<main class="main-container">
+		<!-- Header -->
+		  <h1 class="head">EMI Calculator</h1>
+		<!-- Body -->
+			<fieldset>
+				<label>Loan Amount</label><br>
+				<input type="number" onchange="calculate()" id="amount" class="form-control" required>
+			</fieldset>
+			<fieldset>
+				<label>Interest Rate</label><br>
+				<input type="number" onchange="calculate()" id="rate" class="form-control" required>
+			</fieldset>
+			<fieldset>
+				<label>Number Of instalments</label><br>
+				<input type="number" onchange="calculate()" id="months" class="form-control" required>
+			</fieldset>
+			<button class="btn btn-success">Calculate</button>
+
+			<a href="index.html"><button class="btn btn-primary" id="btn">Back</button></a>
+
+	<h2 id="total"></h2>
+
+	<script type="text/javascript">
+		function calculate() {
+		
+		const amount = document.querySelector('#amount').value;
+
+		const rate = document.querySelector('#rate').value;
+
+		const month = document.querySelector('#months').value;
+
+		const interest = (amount * (rate*0.01)) / month;
+
+		const total = ((amount / month) + interest).toFixed(2);
+
+		document.querySelector('#total')
+		.innerHTML = "EMI : " + total;
+	
+	}
+
+
+	</script>
+
+</body>
+</html>

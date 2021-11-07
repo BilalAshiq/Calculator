@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<meta name="viewport" content="width=devic-width, initial-scale=1.0">
+</head>
+<body>
+
+	<main class="main-container">
+
+		<!-- calc-body -->
+		<h1 class="head">Calculator</h1>
+		 	<select id="value">
+		 		<option>Select</option>
+		 		<option value="add">Addition</option>
+		 		<option value="sub">Subtraction</option>
+		 		<option value="mult">Multiplication</option>
+		 		<option value="div">Division</option>
+		 	</select><br/><br/>
+		 	<input type="number" id="input-1" placeholder="Enter First Number" class="form-control" required><br/>
+		 	<input type="number" id="input-2" placeholder="Enter Second Number" class="form-control" required><br/>
+		<div class="btn-cont">
+		 	<button class="btn btn-success" onclick="calculate()">Calculate</button>	
+		 	 <a href="emi.html"><button class="btn btn-primary" data-tooltip="Way To EMI" id="btn2">EMI</button></a>
+		</div>
+	</main>
+
+	<script src="assets/js/index.js"></script>
+</body>
+</html>
