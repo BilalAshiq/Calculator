@@ -34,13 +34,13 @@
           <script>
             function calculate() {
 		
-	      const amount = document.querySelector('#amount').value;
-              const rate = document.querySelector('#rate').value;
-              const months = document.querySelector('#months').value;
+	      var amount = document.querySelector('#amount').value;
+              var rate = document.querySelector('#rate').value;
+              var months = document.querySelector('#months').value;
               
-               const interest = (amount * (rate*0.01)) / month;
+               var interest = (amount * (rate*0.01)) / month;
  
-               const total = ((amount / month) + interest).toFixed(2);
+               var total = ((amount / month) + interest).toFixed(2);
 
                 document.querySelector('#total')
 	           .innerHTML = "EMI : " + total;
